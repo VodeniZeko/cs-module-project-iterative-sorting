@@ -1,11 +1,10 @@
 # TO-DO: Complete the selection_sort() function below
 def selection_sort(arr):
-    for i in range(0, len(arr) - 1):
+    for i in range(0, len(arr)):
         smallest_index = i
-        for j in range(i + 1, len(arr)):
+        for j in range(i, len(arr)):
             if arr[j] < arr[smallest_index]:
                 smallest_index = j
-                print(j)
         arr[i], arr[smallest_index] = arr[smallest_index], arr[i]
     return arr
 
@@ -13,7 +12,7 @@ def selection_sort(arr):
 # TO-DO:  implement the Bubble Sort function below
 def bubble_sort(arr):
     for i in range(0, len(arr)):
-        for j in range(0, len(arr) - i):
+        for j in range(0, len(arr)):
             if j is not len(arr) - 1 and arr[j] > arr[j + 1]:
                 arr[j], arr[j + 1] = arr[j + 1], arr[j]
     return arr
